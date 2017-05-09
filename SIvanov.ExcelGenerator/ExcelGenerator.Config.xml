@@ -1,0 +1,52 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<SIvanov.ExcelGenerator.Config excelTemplate='C:\Проекты\Жестков\Acron.Reports\SIvanov.ExcelGenerator\Test.xlsx'>
+  <Worksheets>
+    <Worksheet name='Лист1'>
+      <!--
+      Описание умной таблицы Excel
+      Атрибуты:
+      - name - имя таблицы на листе
+      - source - исходная таблица данных
+      - start - координаты ячейки начала таблицы (заголовок первой колонки)
+      -->
+      <SmartTable name='Таблица1' source='Table1' start='A1' >
+        <ColumnMapping>
+          <!--
+          Проекция столбца данных
+          Атрибуты:
+          - header - заголовок колонки в таблице
+          - source - имя столбца в исходной таблице данных; если начинается с символа @, то данные хранятся в атрибуте, иначе - в узле
+          - dataType - тип данных для размещени в ячейки Excel - см. Type.GetType(String)
+          -->
+          <Column header='ID' source='@id' dataType='System.Int32' />
+          <Column header='Наименование' source='@name' dataType='System.String' />
+          <Column header='Кол-во' source='@count' dataType='System.Int32' />
+        </ColumnMapping>
+      </SmartTable>
+    </Worksheet>
+    <Worksheet name='Лист2'>
+      <!--
+      Описание таблицы Excel
+      Атрибуты:
+      - name - имя таблицы на листе
+      - source - исходная таблица данных
+      - start - координаты ячейки начала таблицы (заголовок первой колонки)
+      - showColumnHeaders - показывать ли заголовки колонок (в умной таблице показываются всегда)
+      -->
+      <Table name='Таблица1' source='Table1' start='A1' showColumnHeaders='true' >
+        <ColumnMapping>
+          <!--
+          Проекция столбца данных
+          Атрибуты:
+          - header - заголовок колонки в таблице
+          - source - имя столбца в исходной таблице данных; если начинается с символа @, то данные хранятся в атрибуте, иначе - в узле
+          - dataType - тип данных для размещени в ячейки Excel - см. Type.GetType(String)
+          -->
+          <Column header='ID' source='@id' dataType='System.Int32' />
+          <Column header='Наименование' source='@name' dataType='System.String' />
+          <Column header='Кол-во' source='@count' dataType='System.Int32' />
+        </ColumnMapping>
+      </Table>
+    </Worksheet>
+  </Worksheets>
+</SIvanov.ExcelGenerator.Config>

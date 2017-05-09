@@ -1,0 +1,14 @@
+﻿Примеры DocumentFormat.OpenXml
+https://www.e-iceblue.com/Tutorials/Spire.XLS/OpenXML.html
+
+How to create an Excel file in .NET using OpenXML – Part 4: Draw chart
+http://www.dispatchertimer.com/tutorial/how-to-create-an-excel-file-in-net-using-openxml-part-4-draw-chart/
+
+Open XML Package Editor for Visual Studio
+https://marketplace.visualstudio.com/items?itemName=ChrisRae.OpenXMLPackageEditorforVisualStudio
+
+Open XML SDK 2.5 for Microsoft Office + OpenXMLSDKToolV25
+https://www.microsoft.com/en-in/download/details.aspx?id=30425
+
+SpreadsheetLight 
+http://spreadsheetlight.com/

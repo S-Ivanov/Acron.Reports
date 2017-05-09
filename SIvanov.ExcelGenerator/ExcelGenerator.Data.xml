@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <Table1>
+    <Record id="1" name="Name 1" count="100" />
+    <Record id="2" name="Name 2" count="200" />
+  </Table1>
+</Data>
