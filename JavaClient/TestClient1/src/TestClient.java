@@ -33,7 +33,8 @@ public class TestClient {
 		        try { 
 		        	// сформировать строку конфигурации
 					String configuration = 
-							"модуль = C:\\Проекты\\Excel\\Acron.Reports\\Grouping\\bin\\Debug\\Grouping.dll; класс = Grouping.ReportGeneratorWithGraphics; формат = " +
+							//"модуль = C:\\Проекты\\Excel\\Acron.Reports\\Grouping\\bin\\Debug\\Grouping.dll; класс = Grouping.ReportGeneratorWithGraphics; формат = " +
+							"модуль = C:\\Проекты\\Excel\\Прототип\\Grouping\\bin\\Grouping.dll; класс = Grouping.ReportGeneratorWithGraphics; формат = " +
 							(mode == 1 ? "XML" : "CSV");
 					
 					// сгенерировать Excel-отчет с использованием сервиса
