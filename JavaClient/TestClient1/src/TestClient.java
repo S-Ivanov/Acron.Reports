@@ -12,42 +12,42 @@ public class TestClient {
 
 	public static void main(String[] args) throws IOException 
 	{
-		System.out.println("Генерация Excel-отчетов с использованием WEB-сервиса .Net");
+		System.out.println("Р“РµРЅРµСЂР°С†РёСЏ Excel-РѕС‚С‡РµС‚РѕРІ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј WEB-СЃРµСЂРІРёСЃР° .Net");
 		System.out.println();
 		
-		System.out.println("Возможные форматы исходных данных:");
-		System.out.println("1 - XML-строка");
+		System.out.println("Р’РѕР·РјРѕР¶РЅС‹Рµ С„РѕСЂРјР°С‚С‹ РёСЃС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…:");
+		System.out.println("1 - XML-СЃС‚СЂРѕРєР°");
 		System.out.println("2 - CSV (Comma-Separated Values)");
-		System.out.println("3 - обработка ошибки сервиса");
-		System.out.println("0 - выход");
-		System.out.print("Ваш выбор: ");
+		System.out.println("3 - РѕР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РєРё СЃРµСЂРІРёСЃР°");
+		System.out.println("0 - РІС‹С…РѕРґ");
+		System.out.print("Р’Р°С€ РІС‹Р±РѕСЂ: ");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int mode = Integer.parseInt(reader.readLine());
 		if (mode == 1 || mode == 2)
 		{
-			// загрузить исходные данные
+			// Р·Р°РіСЂСѓР·РёС‚СЊ РёСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ
 			String data = mode == 1 ? loadXML() : loadCSV();
 			
 			if (data != null && !data.isEmpty())
 			{
 		        try { 
-		        	// сформировать строку конфигурации
+		        	// СЃС„РѕСЂРјРёСЂРѕРІР°С‚СЊ СЃС‚СЂРѕРєСѓ РєРѕРЅС„РёРіСѓСЂР°С†РёРё
 					String configuration = 
-							//"модуль = C:\\Проекты\\Excel\\Acron.Reports\\Grouping\\bin\\Debug\\Grouping.dll; класс = Grouping.ReportGeneratorWithGraphics; формат = " +
-							"модуль = C:\\Проекты\\Excel\\Прототип\\Grouping\\bin\\Grouping.dll; класс = Grouping.ReportGeneratorWithGraphics; формат = " +
+							//"РјРѕРґСѓР»СЊ = C:\\РџСЂРѕРµРєС‚С‹\\Excel\\Acron.Reports\\Grouping\\bin\\Debug\\Grouping.dll; РєР»Р°СЃСЃ = Grouping.ReportGeneratorWithGraphics; С„РѕСЂРјР°С‚ = " +
+							"РјРѕРґСѓР»СЊ = C:\\РџСЂРѕРµРєС‚С‹\\Excel\\РџСЂРѕС‚РѕС‚РёРї\\Grouping\\bin\\Grouping.dll; РєР»Р°СЃСЃ = Grouping.ReportGeneratorWithGraphics; С„РѕСЂРјР°С‚ = " +
 							(mode == 1 ? "XML" : "CSV");
 					
-					// сгенерировать Excel-отчет с использованием сервиса
+					// СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ Excel-РѕС‚С‡РµС‚ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃРµСЂРІРёСЃР°
 		        	String excelReportStr = getExcelReportFromService(data, configuration);
 		        	
-		        	// запросить имя файла для сохранения результата
-		    		System.out.print("Имя файла-результата: ");
+		        	// Р·Р°РїСЂРѕСЃРёС‚СЊ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		    		System.out.print("РРјСЏ С„Р°Р№Р»Р°-СЂРµР·СѓР»СЊС‚Р°С‚Р°: ");
 		        	String fileName = reader.readLine();
 		        	
-		        	// сохранить сгенерированный Excel-отчет
+		        	// СЃРѕС…СЂР°РЅРёС‚СЊ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ Excel-РѕС‚С‡РµС‚
 		            Files.write(Paths.get(fileName), Base64.getDecoder().decode(excelReportStr));
 		            
-					System.out.println("Файл записан.");
+					System.out.println("Р¤Р°Р№Р» Р·Р°РїРёСЃР°РЅ.");
 					
 		        } catch (Exception e) {  
 		            e.printStackTrace();  
@@ -57,7 +57,7 @@ public class TestClient {
 		else if (mode == 3)
 		{
 	        try { 
-				// спровоцировать ошибку сервиса
+				// СЃРїСЂРѕРІРѕС†РёСЂРѕРІР°С‚СЊ РѕС€РёР±РєСѓ СЃРµСЂРІРёСЃР°
 	        	getExcelReportFromService(null, null);
 	        	
 	        } catch (Exception e) {  
@@ -67,45 +67,45 @@ public class TestClient {
 	}
 
 	/**
-	 * Генерировать Excel-отчет с использованием сервиса
-	 * @param data - исходные данные для генерации
-	 * @param configuration - конфигурация для работы сервиса
-	 * @return - бинарное представление сгенерированного отчета, закодированное в base64
+	 * Р“РµРЅРµСЂРёСЂРѕРІР°С‚СЊ Excel-РѕС‚С‡РµС‚ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃРµСЂРІРёСЃР°
+	 * @param data - РёСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РґР»СЏ РіРµРЅРµСЂР°С†РёРё
+	 * @param configuration - РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃРµСЂРІРёСЃР°
+	 * @return - Р±РёРЅР°СЂРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅРѕРіРѕ РѕС‚С‡РµС‚Р°, Р·Р°РєРѕРґРёСЂРѕРІР°РЅРЅРѕРµ РІ base64
 	 * @throws RemoteException
 	 */
 	private static String getExcelReportFromService(String data, String configuration) throws RemoteException
 	{
-		// вызвать сервис по адресу, зафиксированному во время генерации прокси
+		// РІС‹Р·РІР°С‚СЊ СЃРµСЂРІРёСЃ РїРѕ Р°РґСЂРµСЃСѓ, Р·Р°С„РёРєСЃРёСЂРѕРІР°РЅРЅРѕРјСѓ РІРѕ РІСЂРµРјСЏ РіРµРЅРµСЂР°С†РёРё РїСЂРѕРєСЃРё
        	//return (new IExcelReportingServiceProxy()).getExcelReportBase64(data, configuration);
 		
-		// вызвать сервис по указанному адресу
+		// РІС‹Р·РІР°С‚СЊ СЃРµСЂРІРёСЃ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ Р°РґСЂРµСЃСѓ
        	return (new IExcelReportingServiceProxy("http://localhost:8733/Design_Time_Addresses/ExcelReportingServiceLib/ExcelReportingService/"))
        			.getExcelReportBase64(data, configuration);
 	}
 	
 	/**
-	 * Загрузить CSV-файл с исходными данными
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ CSV-С„Р°Р№Р» СЃ РёСЃС…РѕРґРЅС‹РјРё РґР°РЅРЅС‹РјРё
 	 * @return
 	 * @throws IOException
 	 */
 	private static String loadCSV() throws IOException {
-		return loadText("Имя исходного CSV-файла: ");
+		return loadText("РРјСЏ РёСЃС…РѕРґРЅРѕРіРѕ CSV-С„Р°Р№Р»Р°: ");
 	}
 
 	/**
-	 * Загрузить XML-файл с исходными данными
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ XML-С„Р°Р№Р» СЃ РёСЃС…РѕРґРЅС‹РјРё РґР°РЅРЅС‹РјРё
 	 * @return
 	 * @throws IOException
 	 */
 	private static String loadXML() throws IOException {
 		// Byte order mark screws up file reading in Java
 		// http://stackoverflow.com/questions/1835430/byte-order-mark-screws-up-file-reading-in-java
-		return loadText("Имя исходного XML-файла: ");
+		return loadText("РРјСЏ РёСЃС…РѕРґРЅРѕРіРѕ XML-С„Р°Р№Р»Р°: ");
 	}
 
 	/**
-	 * Загрузить текстовый файл (в формате Windows-1251)
-	 * @param message - запрос имени файла
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р» (РІ С„РѕСЂРјР°С‚Рµ Windows-1251)
+	 * @param message - Р·Р°РїСЂРѕСЃ РёРјРµРЅРё С„Р°Р№Р»Р°
 	 * @return
 	 * @throws IOException
 	 */
