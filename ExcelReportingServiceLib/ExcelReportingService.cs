@@ -5,12 +5,28 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace ExcelReportingServiceLib
 {
     public class ExcelReportingService : IExcelReportingService
     {
+        public Stream GetHtml(int id)
+        //public string GetHtml()
+        {
+            //string result = "<a href='someLingk' >" + id.ToString() + "</a>";
+            //byte[] resultBytes = Encoding.UTF8.GetBytes(result);
+            //WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            //return new MemoryStream(resultBytes);
+
+            byte[] resultBytes = File.ReadAllBytes(@"C:\Проекты\Excel\Acron.Reports\Grouping\test.xlsx");
+            WebOperationContext.Current.OutgoingResponse.ContentType = "application/vnd.ms-excel";
+            return new MemoryStream(resultBytes);
+
+            //return result;
+        }
+
         public string Echo(string data)
         {
             return data;
