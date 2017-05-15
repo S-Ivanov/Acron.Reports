@@ -9,18 +9,42 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grouping", "Grouping\Grouping.csproj", "{BEC5C784-DB20-4F64-8AF8-CDAADF2DBFA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceLib", "ExcelReportingServiceLib\ExcelReportingServiceLib.csproj", "{1A461361-FC1B-40CE-8F0E-6A26339F1AB3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingLib", "ExcelReportingLib\ExcelReportingLib.csproj", "{DE0EE1D5-5101-478A-AB62-221D1C6841C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceHost", "ExcelReportingServiceHost\ExcelReportingServiceHost.csproj", "{6758C651-C0B3-41EB-AE65-2FEE055465BE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceTest", "ExcelReportingServiceTest\ExcelReportingServiceTest.csproj", "{25D3306B-1E3E-4C43-A2D5-B572B556D51B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1A461361-FC1B-40CE-8F0E-6A26339F1AB3} = {1A461361-FC1B-40CE-8F0E-6A26339F1AB3}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateCSV", "GenerateCSV\GenerateCSV.csproj", "{EBEDEDAD-6613-47D5-A2BF-AE4AD708CAE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceLib3", "ExcelReportingServiceLib3\ExcelReportingServiceLib3.csproj", "{729C3DCD-1342-4D7D-9707-9F867C3F5D47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototypes", "Prototypes", "{7D339F74-6D35-4E9A-B20B-7A70FB3478F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1", "1", "{B716AFF3-FAE5-4484-BD2F-267BBFDB1AD8}"
+	ProjectSection(SolutionItems) = preProject
+		Prototypes\1\Readme.txt = Prototypes\1\Readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceLib", "Prototypes\1\ExcelReportingServiceLib\ExcelReportingServiceLib.csproj", "{A010CBF3-2CD4-4295-A274-F70F443E1D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceHost", "Prototypes\1\ExcelReportingServiceHost\ExcelReportingServiceHost.csproj", "{E978651F-914D-450A-A828-127D043746D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2", "2", "{16818F0D-53DD-41A0-B5DC-9E8FF9149236}"
+	ProjectSection(SolutionItems) = preProject
+		Prototypes\2\Readme.txt = Prototypes\2\Readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceLib", "Prototypes\2\ExcelReportingServiceLib\ExcelReportingServiceLib.csproj", "{FCB803AD-7C71-4FDD-9C16-B54D2CF8BB2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceHost", "Prototypes\2\ExcelReportingServiceHost\ExcelReportingServiceHost.csproj", "{05819A4E-A119-4A27-BD80-A69C8D2C2F34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3", "3", "{FDED3BD0-46B0-43D7-9317-F9005823A7CC}"
+	ProjectSection(SolutionItems) = preProject
+		Prototypes\3\Readme.txt = Prototypes\3\Readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceLib", "Prototypes\3\ExcelReportingServiceLib\ExcelReportingServiceLib.csproj", "{F7E5607E-7191-4A24-9F19-9D1716AB3ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReportingServiceHost", "Prototypes\3\ExcelReportingServiceHost\ExcelReportingServiceHost.csproj", "{870A2E3B-F74D-4877-8241-C3D0739ECDE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,18 +64,10 @@ Global
 		{BEC5C784-DB20-4F64-8AF8-CDAADF2DBFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEC5C784-DB20-4F64-8AF8-CDAADF2DBFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEC5C784-DB20-4F64-8AF8-CDAADF2DBFA4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A461361-FC1B-40CE-8F0E-6A26339F1AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A461361-FC1B-40CE-8F0E-6A26339F1AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A461361-FC1B-40CE-8F0E-6A26339F1AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A461361-FC1B-40CE-8F0E-6A26339F1AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE0EE1D5-5101-478A-AB62-221D1C6841C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE0EE1D5-5101-478A-AB62-221D1C6841C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE0EE1D5-5101-478A-AB62-221D1C6841C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE0EE1D5-5101-478A-AB62-221D1C6841C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6758C651-C0B3-41EB-AE65-2FEE055465BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6758C651-C0B3-41EB-AE65-2FEE055465BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6758C651-C0B3-41EB-AE65-2FEE055465BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6758C651-C0B3-41EB-AE65-2FEE055465BE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25D3306B-1E3E-4C43-A2D5-B572B556D51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25D3306B-1E3E-4C43-A2D5-B572B556D51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D3306B-1E3E-4C43-A2D5-B572B556D51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -60,8 +76,47 @@ Global
 		{EBEDEDAD-6613-47D5-A2BF-AE4AD708CAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBEDEDAD-6613-47D5-A2BF-AE4AD708CAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBEDEDAD-6613-47D5-A2BF-AE4AD708CAE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729C3DCD-1342-4D7D-9707-9F867C3F5D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729C3DCD-1342-4D7D-9707-9F867C3F5D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729C3DCD-1342-4D7D-9707-9F867C3F5D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729C3DCD-1342-4D7D-9707-9F867C3F5D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A010CBF3-2CD4-4295-A274-F70F443E1D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A010CBF3-2CD4-4295-A274-F70F443E1D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A010CBF3-2CD4-4295-A274-F70F443E1D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A010CBF3-2CD4-4295-A274-F70F443E1D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E978651F-914D-450A-A828-127D043746D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E978651F-914D-450A-A828-127D043746D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E978651F-914D-450A-A828-127D043746D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E978651F-914D-450A-A828-127D043746D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB803AD-7C71-4FDD-9C16-B54D2CF8BB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB803AD-7C71-4FDD-9C16-B54D2CF8BB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB803AD-7C71-4FDD-9C16-B54D2CF8BB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB803AD-7C71-4FDD-9C16-B54D2CF8BB2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05819A4E-A119-4A27-BD80-A69C8D2C2F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05819A4E-A119-4A27-BD80-A69C8D2C2F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05819A4E-A119-4A27-BD80-A69C8D2C2F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05819A4E-A119-4A27-BD80-A69C8D2C2F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E5607E-7191-4A24-9F19-9D1716AB3ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E5607E-7191-4A24-9F19-9D1716AB3ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E5607E-7191-4A24-9F19-9D1716AB3ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E5607E-7191-4A24-9F19-9D1716AB3ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870A2E3B-F74D-4877-8241-C3D0739ECDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870A2E3B-F74D-4877-8241-C3D0739ECDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870A2E3B-F74D-4877-8241-C3D0739ECDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870A2E3B-F74D-4877-8241-C3D0739ECDE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B716AFF3-FAE5-4484-BD2F-267BBFDB1AD8} = {7D339F74-6D35-4E9A-B20B-7A70FB3478F9}
+		{A010CBF3-2CD4-4295-A274-F70F443E1D9D} = {B716AFF3-FAE5-4484-BD2F-267BBFDB1AD8}
+		{E978651F-914D-450A-A828-127D043746D2} = {B716AFF3-FAE5-4484-BD2F-267BBFDB1AD8}
+		{16818F0D-53DD-41A0-B5DC-9E8FF9149236} = {7D339F74-6D35-4E9A-B20B-7A70FB3478F9}
+		{FCB803AD-7C71-4FDD-9C16-B54D2CF8BB2D} = {16818F0D-53DD-41A0-B5DC-9E8FF9149236}
+		{05819A4E-A119-4A27-BD80-A69C8D2C2F34} = {16818F0D-53DD-41A0-B5DC-9E8FF9149236}
+		{FDED3BD0-46B0-43D7-9317-F9005823A7CC} = {7D339F74-6D35-4E9A-B20B-7A70FB3478F9}
+		{F7E5607E-7191-4A24-9F19-9D1716AB3ED0} = {FDED3BD0-46B0-43D7-9317-F9005823A7CC}
+		{870A2E3B-F74D-4877-8241-C3D0739ECDE0} = {FDED3BD0-46B0-43D7-9317-F9005823A7CC}
 	EndGlobalSection
 EndGlobal
