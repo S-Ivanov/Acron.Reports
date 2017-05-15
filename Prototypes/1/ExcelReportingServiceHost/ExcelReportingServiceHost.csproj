@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6758C651-C0B3-41EB-AE65-2FEE055465BE}</ProjectGuid>
+    <ProjectGuid>{E978651F-914D-450A-A828-127D043746D2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ExcelReportingServiceHost</RootNamespace>
@@ -46,18 +46,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ExcelReportingServiceLib\ExcelReportingServiceLib.csproj">
-      <Project>{1A461361-FC1B-40CE-8F0E-6A26339F1AB3}</Project>
+      <Project>{a010cbf3-2cd4-4295-a274-f70f443e1d9d}</Project>
       <Name>ExcelReportingServiceLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Readme.txt" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
