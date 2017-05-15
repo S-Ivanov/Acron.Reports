@@ -57,5 +57,26 @@ namespace ExcelReportingLib
 
             return result;
         }
+
+        public static IDictionary<string, string> GetConfiguration(string configuration)
+        {
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            if (!string.IsNullOrEmpty(configuration))
+            {
+                string[] pairs = configuration.Split(';');
+                foreach (var pair in pairs)
+                {
+                    string[] pairParts = pair.Split('=');
+                    if (pairParts.Length == 2)
+                    {
+                        pairParts[0] = pairParts[0].Trim();
+                        pairParts[1] = pairParts[1].Trim();
+                        if (!string.IsNullOrEmpty(pairParts[0]) && !string.IsNullOrEmpty(pairParts[1]))
+                            result.Add(pairParts[0], pairParts[1]);
+                    }
+                }
+            }
+            return result;
+        }
     }
 }
