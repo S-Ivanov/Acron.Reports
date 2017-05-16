@@ -12,24 +12,24 @@ public class TestClient {
 	public static void main(String[] args) {
 		
 		try {
-			System.out.println("Загрузка Excel-отчетов с использованием WEB-сервиса .Net");
+			System.out.println("Р—Р°РіСЂСѓР·РєР° Excel-РѕС‚С‡РµС‚РѕРІ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј WEB-СЃРµСЂРІРёСЃР° .Net");
 			System.out.println();
 			
-			System.out.print("Введите id отчета: ");
+			System.out.print("Р’РІРµРґРёС‚Рµ id РѕС‚С‡РµС‚Р°: ");
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			String id = reader.readLine();
 			
-			// сгенерировать Excel-отчет с использованием сервиса
+			// СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ Excel-РѕС‚С‡РµС‚ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃРµСЂРІРёСЃР°
         	String excelReportStr = getExcelReportFromService(id);
         	
-        	// запросить имя файла для сохранения результата
-    		System.out.print("Имя файла-результата: ");
+        	// Р·Р°РїСЂРѕСЃРёС‚СЊ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+    		System.out.print("РРјСЏ С„Р°Р№Р»Р°-СЂРµР·СѓР»СЊС‚Р°С‚Р°: ");
         	String fileName = reader.readLine();
         	
-        	// сохранить сгенерированный Excel-отчет
+        	// СЃРѕС…СЂР°РЅРёС‚СЊ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ Excel-РѕС‚С‡РµС‚
             Files.write(Paths.get(fileName), Base64.getDecoder().decode(excelReportStr));
             
-			System.out.println("Файл записан.");
+			System.out.println("Р¤Р°Р№Р» Р·Р°РїРёСЃР°РЅ.");
 
 		} catch (Exception e) {  
             e.printStackTrace();  
@@ -37,17 +37,17 @@ public class TestClient {
 	}
 
 	/**
-	 * Загрузить Excel-отчет с использованием сервиса
-	 * @param id - идентификатор отчета
-	 * @return - бинарное представление сгенерированного отчета, закодированное в base64
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ Excel-РѕС‚С‡РµС‚ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃРµСЂРІРёСЃР°
+	 * @param id - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚С‡РµС‚Р°
+	 * @return - Р±РёРЅР°СЂРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅРѕРіРѕ РѕС‚С‡РµС‚Р°, Р·Р°РєРѕРґРёСЂРѕРІР°РЅРЅРѕРµ РІ base64
 	 * @throws RemoteException
 	 */
 	private static String getExcelReportFromService(String id) throws RemoteException
 	{
-		// вызвать сервис по адресу, зафиксированному во время генерации прокси
+		// РІС‹Р·РІР°С‚СЊ СЃРµСЂРІРёСЃ РїРѕ Р°РґСЂРµСЃСѓ, Р·Р°С„РёРєСЃРёСЂРѕРІР°РЅРЅРѕРјСѓ РІРѕ РІСЂРµРјСЏ РіРµРЅРµСЂР°С†РёРё РїСЂРѕРєСЃРё
        	//return (new IExcelReportingServiceProxy()).getReport(id, null, null);
 		
-		// вызвать сервис по указанному адресу
+		// РІС‹Р·РІР°С‚СЊ СЃРµСЂРІРёСЃ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ Р°РґСЂРµСЃСѓ
        	return (new IExcelReportingServiceProxy("http://localhost:2585/ExcelReportingService/")).getReport(id, null, null);
 	}
 }

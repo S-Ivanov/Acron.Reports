@@ -14,18 +14,18 @@ public class TestClient {
 	public static void main(String[] args) {
 		
 		try {
-			System.out.println("Генерация Excel-отчетов с использованием WEB-сервиса .Net (базовая авторизация)");
+			System.out.println("Р“РµРЅРµСЂР°С†РёСЏ Excel-РѕС‚С‡РµС‚РѕРІ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј WEB-СЃРµСЂРІРёСЃР° .Net (Р±Р°Р·РѕРІР°СЏ Р°РІС‚РѕСЂРёР·Р°С†РёСЏ)");
 			System.out.println();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
-			System.out.print("Введите идентификатор отчета: ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚С‡РµС‚Р°: ");
 			String id = reader.readLine();
 			
 			String serviceUri = "http://localhost:2585/ExcelReportingService/GetReport/id=" + id;
 			
-			System.out.print("Введите имя пользователя: ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ");
 			String user = reader.readLine();
-			System.out.print("Введите пароль: ");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ: ");
 			String password = reader.readLine();
 			
 			String authString = user + ":" + password;
@@ -36,12 +36,12 @@ public class TestClient {
 			urlConnection.setRequestProperty("Authorization", "Basic " + authStringEnc);
 			InputStream inputStream = urlConnection.getInputStream();
 			
-    		System.out.print("Имя файла-результата: ");
+    		System.out.print("РРјСЏ С„Р°Р№Р»Р°-СЂРµР·СѓР»СЊС‚Р°С‚Р°: ");
         	String fileName = reader.readLine();
 
         	Files.copy(inputStream, Paths.get(fileName));
 			
-			System.out.println("Файл записан.");
+			System.out.println("Р¤Р°Р№Р» Р·Р°РїРёСЃР°РЅ.");
 			
 			Desktop.getDesktop().open(new File(fileName));
 			
